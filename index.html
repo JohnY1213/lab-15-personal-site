@@ -47,34 +47,34 @@
 
         <script>
             document.addEventListener("DOMContentLoaded", main);
-
+            
             var sketch;
             var context;
             var circle = { "x": 0, "y": 100, "r": 15 };
             var dx = 2;
-            var dy = 2; 
+            var dy = 2;
             var fps = 15;
 
-            
+
             function main() {
                 sketch = document.getElementById("sketch");
-                
-                
+
+
                 context = sketch.getContext("2d");
                 circle = { "x": 25, "y": sketch.offsetHeight / 2, "r": 15 };
                 setInterval(animate, fps);
-                
+
 
             }
             function animate() {
-                
+
                 context.clearRect(0, 0, sketch.offsetWidth, sketch.offsetHeight);
                 draw_circle(circle.x, circle.y, circle.r);
                 circle.x = circle.x + dx;
                 circle.y = circle.y + dy;
                 if (circle.x > 1500 - dx - circle.r) {
                     dx = dx * -1;
-                    
+
 
                 }
                 else if (circle.y > 70 - dy - circle.r) {
@@ -102,7 +102,7 @@
 
         </script>
     </div>
-    
+
     <div class="stuff" id="first">
 
         <details>
@@ -154,5 +154,16 @@
     </div>
 
     <script src="navbar.v01.js"></script>
+
+    <div>
+        <audio controls="controls">
+            
+                <source src="dao.mp3" type="audio/mp3" />
+                <source src="dao.ogg" type="audio/ogg" />
+            
+        </audio>
+    </div>
 </body>
+
+
 </html>
